@@ -1,0 +1,112 @@
+$bp: 1500px;
+
+.seo-metadata-container {
+
+    input[name=title] {
+        width: 90%;
+    }
+
+    label {
+        padding-left: 0;
+    }
+
+    .title-length {
+        font-size: 0.75em;
+        color: #ccc;
+        top: -5px;
+        position: relative;
+    }
+
+    .help-block {
+        margin: 10px 0 35px 0;
+        font-size: 12px;
+        line-height: 16px;
+        opacity: 0.5;
+        max-width: 90%;
+        p {
+            margin-bottom: 14px;
+        }
+    }
+
+    .error {
+        color: rgb(185, 74, 72);
+    }    
+
+    textarea {
+        width: 90%;
+        height: 97px;
+    }
+
+    .controls-col {
+        @media (max-width: $bp) {
+            width: 100%;
+        }
+    }
+
+    .serp-col {
+        padding-left: 30px;
+        position: relative;
+        @media (max-width: $bp) {
+            margin-left: 210px !important;
+            clear: left;
+            width: 70%;
+        }
+
+        .serp-preview-label {
+            font-size: 1em;
+            font-weight: bold;
+            display: none;
+            border-bottom: 1px #ccc solid;
+            a {
+                cursor: pointer;
+            }
+
+            @media (max-width: $bp) {
+                display: block;
+            }
+        }
+    }
+
+    .serp-preview {
+
+        min-height: 120px;
+        max-width: 520px;
+        //border: 1px #ccc solid;
+        border-radius: 2px;
+        
+        //padding: 40px 20px;
+        padding: 10px 0;
+        color: #1a0dab;
+        font-family: arial, sans-serif;
+        zoom: 1;
+
+        h3 {
+            font-size: 18px;
+            line-height: 21.600000381469727px; 
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            &:hover, &:visited {
+                text-decoration: none;
+            }
+
+            color: rgb(0, 102, 33);
+            line-height: 16px;
+            font-size: 13px;
+        }
+
+        p {
+            margin: 0; 
+            max-width: 504px;
+            color: rgb(84, 84, 84);
+            font-size: 13px;
+            line-height: 18.200000762939453px;
+        }
+        
+        .listing {
+            margin: 23px 0;
+        }
+    }
+}

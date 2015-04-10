@@ -1,0 +1,46 @@
+{
+  "propertyEditors": [
+    {
+      "name": "SEO Metadata",
+      "alias": "Epiphany.SeoMetadata",
+      "editor": {
+        "valueType": "JSON",
+        "view": "~/App_Plugins/Epiphany.SeoMetadata/views/epiphany.seo.metadata.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Allow long titles",
+            "description": "If ticked, long titles will not invalidate the form",
+            "key": "allowLongTitles",
+            "view": "boolean"
+          },
+          {
+            "label": "Allow long descriptions",
+            "description": "If ticked, long descriptions will not invalidate the form",
+            "key": "allowLongDescriptions",
+            "view": "boolean"
+          },
+          {
+            "label": "SERP Title Length",
+            "description": "The length that Google starts stripping/hiding characters",
+            "key": "serpTitleLength",
+            "view": "number"
+          },
+          {
+            "label": "SERP Description Length",
+            "description": "The length that Google starts stripping/hiding characters",
+            "key": "serpDescriptionLength",
+            "view": "number"
+          }
+        ]
+      }
+    }
+  ],
+  "css": [
+    "~/App_Plugins/Epiphany.SeoMetadata/css/epiphany.seo.metadata.css"
+  ],
+  "javascript": [
+    "~/App_Plugins/Epiphany.SeoMetadata/js/epiphany.seo.metadata.js"
+  ]
+}

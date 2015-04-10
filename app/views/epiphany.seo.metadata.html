@@ -1,0 +1,99 @@
+<div class="seo-metadata-container" ng-controller="EpiphanySeoMetadataController">
+
+    <div class="row-fluid">
+        <div class="span6 controls-col">
+            <!-- form fields -->
+            <!-- title-->
+            <label class="control-label" for="title">
+                Page Title
+            </label>
+            <div class="controls controls-row">
+
+                <input name="title" type="text" ng-model="model.value.title" maxlen placeholder="Page Title" />
+                <span class="title-length" ng-class="{error: model.value.title.length > model.config.serpTitleLength}">
+                {{model.value.title.length}}<span ng-show="model.value.title.length > model.config.serpTitleLength">!</span>
+                </span>
+
+                <div class="help-block">
+                    <p>
+                    The <strong>Title</strong> should be an accurate and concise description of a page's content, and is critical to both a user experience
+                    and search engine optimisation.
+                    </p>
+                    <p>
+                    More Information: <a href="http://moz.com/learn/seo/title-tag" target="_blank">Title Tag (Moz.com)</a>
+                    </p>
+                </div>
+
+                <span class="help-inline" val-msg-for="title" val-toggle-msg="maxlen">Page title is too long</span>
+            </div>
+            <!-- page description -->
+            <label class="control-label" for="description">
+                Meta Description
+            </label>
+            <div class="controls controls-row">
+                <textarea name="description" ng-model="model.value.description" maxlen placeholder="My Nice Description of this Page"></textarea>
+                <span class="title-length" ng-class="{error: model.value.description.length > model.config.serpDescriptionLength}">
+                {{model.value.description.length}}<span ng-show="model.value.description.length > model.config.serpDescriptionLength">!</span>
+                </span>
+
+                <div class="help-block">
+                    <p>
+                    <strong>Meta Descriptions</strong> are commonly used in search engine result pages, and are extremely important in gaining user click-through.
+                    </p>
+
+                    <p>
+                    Make sure to let users know whether the page contains the information they're looking for.
+                    </p>
+
+                    <p>
+                    More Information: <a href="http://moz.com/learn/seo/meta-description" target="_blank">Meta Description (Moz.com)</a>
+                    </p>
+                </div>
+
+
+
+
+                <span class="help-inline" val-msg-for="description" val-toggle-msg="maxlen">Page description is too long</span>
+            </div>
+        </div>
+        <!-- serp (google) preview -->
+        <div class="span6 serp-col">
+            <span class="serp-preview-label">Google Preview (<a prevent-default ng-click="hideSerp = !hideSerp">Toggle</a>)</span>
+            <div class="serp-preview" ng-hide="hideSerp">
+
+                <img src="/App_Plugins/Epiphany.SeoMetadata/views/serp1.png" alt=""/>
+                <div class="listing">
+                    <h3>{{ model.value.title || 'Page Title' | ellipsisLimit:serpTitleLength}}</h3>
+                    <a>{{ GetUrl() }} <i class="icon icon-navigation-down"></i></a>
+                    <p>{{ model.value.description || 'My Nice Description of this Page' | ellipsisLimit:serpDescriptionLength }}</p>
+                </div>
+
+                <img src="/App_Plugins/Epiphany.SeoMetadata/views/serp2.png" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <label class="control-label" for="urlName">URL Name</label>
+            <div class="controls controls-row">
+                <input type="text" class="input-xlarge" ng-model="model.value.urlName" />
+                <div class="help-block">
+                    <p>This is the URL segment that will be used on the site. It is okay to leave this blank (Umbraco will create a URL based off the page name).</p>
+                    <p><strong>Be careful when setting/changing this.</strong> It is generally bad practice to change this once a page has been published.</p>
+                    <p>If unsure, leave as-is and speak to Epiphany for advice.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <label class="control-label" for="noIndex">Options</label>
+            <div class="controls controls-row">
+                <input type="checkbox" ng-model="model.value.noIndex" />
+                <span>Do Not Index (Hide from Search Engines)</span>
+            </div>
+        </div>
+    </div>
+</div>
