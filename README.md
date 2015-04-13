@@ -1,6 +1,8 @@
-# Epiphany.SeoMetadata
+![SEO metadata](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/epiphany-logo.png)
 
-An Umbraco property editor for SEO metadata
+# SEO Metadata for Umbraco
+
+An Umbraco property editor for SEO metadata.
 
 ![SEO metadata](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/example1.gif)
 
@@ -15,7 +17,7 @@ After installing via Nuget, create a property editor of type **SEO Metadata** an
 
 ![Property editor options](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/property-editor-options.png)
 
-Alternatively, if you want to hack around with the project, you can fork, checkout and develop locally. See the Setup section.
+Alternatively, if you want to hack around with the project, you can fork, checkout and develop locally. See the [Developing SEO Metadata](#developing-seo-metadata) section.
 
 ## Overview
 
