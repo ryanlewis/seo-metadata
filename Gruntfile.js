@@ -226,6 +226,15 @@ module.exports = function (grunt) {
       }
     },
 
+    /*
+      See https://github.com/vojtajina/grunt-bump
+
+      For bumping a version, best to do the following
+      grunt bump-only:minor
+      grunt assemblyinfo
+      grunt bump-commit
+    */
+
     bump: {
       options: {
         files: ['package.json'],
