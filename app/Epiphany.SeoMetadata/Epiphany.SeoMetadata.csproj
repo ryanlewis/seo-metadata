@@ -232,7 +232,6 @@
     <Compile Include="SeoMetadataPropertyValueConverter.cs" />
     <Compile Include="SeoMetadataStartup.cs" />
     <Compile Include="SeoMetadataUrlSegmentProvider.cs" />
-    <Compile Include="VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
