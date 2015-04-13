@@ -83,10 +83,20 @@ module.exports = function (grunt) {
       },
 
       nuget: {
-        expand: true,
-        cwd: '<%= dest %>',
-        src: '**',
-        dest: 'tmp/nuget/content/'
+        files: [
+          {
+            cwd: '<%= dest %>',
+            src: ['**/*', '!bin', '!bin/*'],
+            dest: 'tmp/nuget/content',
+            expand: true
+          },
+          {
+            cwd: '<%= dest %>/bin',
+            src: ['*.dll'],
+            dest: 'tmp/nuget/lib/net40',
+            expand: true
+          }
+        ]
       },
 
       umbraco: {
