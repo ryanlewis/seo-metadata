@@ -2,7 +2,7 @@
 
 An Umbraco property editor for SEO metadata
 
-![SEO metadata](http://ryanlewis.github.io/seo-metadata/images/example1.gif)
+![SEO metadata](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/example1.gif)
 
 ## Installation
 
@@ -13,7 +13,7 @@ Install-Package Epiphany.SeoMetadata
 
 After installing via Nuget, create a property editor of type **SEO Metadata** and include on your page. We recommend the property name **"metadata"** to work with all features out-of-the-box (see the [URL Name](#using-the-url-name) section for configuration options)
 
-![Property editor options](http://ryanlewis.github.io/seo-metadata/images/property-editor-options.png)
+![Property editor options](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/property-editor-options.png)
 
 Alternatively, if you want to hack around with the project, you can fork, checkout and develop locally. See the Setup section.
 
@@ -21,7 +21,7 @@ Alternatively, if you want to hack around with the project, you can fork, checko
 
 SEO Metadata for Umbraco is a property editor that is used for maintaing common SEO-related information for a page. It gives users a visual representation of how the page would look on a Google search result page and hints to when the title and description is too long, with optional validation.
 
-![Too much data](http://ryanlewis.github.io/seo-metadata/images/too-much-data.png)
+![Too much data](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/too-much-data.png)
 
 ## Configuration
 
