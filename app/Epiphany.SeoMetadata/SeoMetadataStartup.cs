@@ -1,4 +1,7 @@
-﻿using Umbraco.Core;
+﻿using System;
+using System.Configuration;
+using Umbraco.Core;
+using Umbraco.Core.Logging;
 using Umbraco.Core.Strings;
 
 namespace Epiphany.SeoMetadata
@@ -7,7 +10,15 @@ namespace Epiphany.SeoMetadata
     {
         protected override void ApplicationStarting(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
-            UrlSegmentProviderResolver.Current.InsertTypeBefore(typeof(DefaultUrlSegmentProvider), typeof(SeoMetadataUrlSegmentProvider));
+            bool ignoreSegmentProvider;
+
+            var hasKey = Boolean.TryParse(ConfigurationManager.AppSettings["SeoMetadata.NoSegmentProvider"], out ignoreSegmentProvider);
+
+            if (hasKey && !ignoreSegmentProvider)
+            {
+                UrlSegmentProviderResolver.Current.InsertTypeBefore(typeof(DefaultUrlSegmentProvider), typeof(SeoMetadataUrlSegmentProvider));
+                LogHelper.Info<SeoMetadataStartup>("Configured SeoMetadataUrlSegmentProvider");
+            }
 
             base.ApplicationStarting(umbracoApplication, applicationContext);
         }
