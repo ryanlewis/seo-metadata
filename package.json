@@ -1,7 +1,7 @@
 {
   "name": "Epiphany.SeoMetadata",
-  "version": "0.0.1",
-  "description": "A property editor for SEO metadata",
+  "version": "0.1.0",
+  "description": "An Umbraco property editor for SEO metadata",
   "license": "MIT",
   "author": {
     "name": "Ryan Lewis",
