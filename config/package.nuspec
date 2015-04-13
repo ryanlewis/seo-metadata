@@ -8,7 +8,7 @@
     <description><%= description %></description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
-    <projectUrl>https://github.com/ryanlewis/seo-metadatas</projectUrl>
+    <projectUrl>https://github.com/ryanlewis/seo-metadata</projectUrl>
     <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
     <tags>umbraco seo metadata propertyeditor ryanlewis epiphany</tags>
     <dependencies>
