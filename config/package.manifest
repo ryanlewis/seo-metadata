@@ -23,13 +23,13 @@
           },
           {
             "label": "SERP Title Length",
-            "description": "The length that Google starts stripping/hiding characters",
+            "description": "The length that Google starts stripping/hiding characters. 65 is roughly where Google will start truncating the title.",
             "key": "serpTitleLength",
             "view": "number"
           },
           {
             "label": "SERP Description Length",
-            "description": "The length that Google starts stripping/hiding characters",
+            "description": "The length that Google starts stripping/hiding characters. 150 characters is roughly where Google will start truncating the description.",
             "key": "serpDescriptionLength",
             "view": "number"
           },
