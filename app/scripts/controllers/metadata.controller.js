@@ -1,9 +1,9 @@
 angular.module("umbraco").controller("EpiphanySeoMetadataController", [
-  '$scope', 'assetsService', function($scope, assetsService) {
+  '$scope', function($scope) {
 
     $scope.invalidate = true;
     $scope.model.hideLabel = true;
-    $scope.serpTitleLength = 64;
+    $scope.serpTitleLength = 65;
     $scope.serpDescriptionLength = 150;
     $scope.developerName = $scope.model.config.developerName || 'your agency';
 
@@ -52,7 +52,5 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
         }
       });
     });
-
-    //assetsService.loadCss("/App_Plugins/Epiphany.SeoMetadata/metadata.css");
   }
 ]);
