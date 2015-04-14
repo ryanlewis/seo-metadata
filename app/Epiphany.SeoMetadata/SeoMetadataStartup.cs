@@ -14,7 +14,7 @@ namespace Epiphany.SeoMetadata
 
             var hasKey = Boolean.TryParse(ConfigurationManager.AppSettings["SeoMetadata.NoSegmentProvider"], out ignoreSegmentProvider);
 
-            if (hasKey && !ignoreSegmentProvider)
+            if (!hasKey || !ignoreSegmentProvider)
             {
                 UrlSegmentProviderResolver.Current.InsertTypeBefore(typeof(DefaultUrlSegmentProvider), typeof(SeoMetadataUrlSegmentProvider));
                 LogHelper.Info<SeoMetadataStartup>("Configured SeoMetadataUrlSegmentProvider");
