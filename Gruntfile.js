@@ -251,15 +251,15 @@ module.exports = function (grunt) {
         updateConfigs: [],
         commit: true,
         commitMessage: 'Release v%VERSION%',
-        commitFiles: ['package.json'],
+        commitFiles: ['package.json', 'app/Epiphany.SeoMetadata/Properties/AssemblyInfo.cs'],
         createTag: true,
         tagName: 'v%VERSION%',
         tagMessage: 'Version %VERSION%',
-        push: true,
+        push: false,
         pushTo: 'origin',
         gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
         globalReplace: false,
-        prereleaseName: false,
+        prereleaseName: 'pre',
         regExp: false
       }
     }
