@@ -5,6 +5,7 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
     $scope.model.hideLabel = true;
     $scope.serpTitleLength = 64;
     $scope.serpDescriptionLength = 150;
+    $scope.developerName = $scope.model.config.developerName || 'your agency';
 
     $scope.GetUrl = function() {
 

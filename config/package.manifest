@@ -32,6 +32,12 @@
             "description": "The length that Google starts stripping/hiding characters",
             "key": "serpDescriptionLength",
             "view": "number"
+          },
+          {
+            "label": "Developer Name",
+            "description": "The name of the agency (for example, \"Epiphany\") to show on the control. This is used in the help descriptions.",
+            "key": "developerName",
+            "view": "textstring"
           }
         ]
       }
