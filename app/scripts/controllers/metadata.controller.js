@@ -7,6 +7,11 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
     $scope.serpDescriptionLength = 150;
     $scope.developerName = $scope.model.config.developerName || 'your agency';
 
+    // default model.value
+    if (!$scope.model.value) {
+      $scope.model.value = { title: '', description: '', urlName: '', noIndex: false };
+    }
+
     $scope.GetUrl = function() {
 
       var urlName = $scope.model.value.urlName && $scope.model.value.urlName.length ? '/' + $scope.model.value.urlName + '/' : $scope.GetParentContent().urls[0];
