@@ -6,6 +6,18 @@ SEO Metadata for Umbraco is a property editor that is used for maintaining commo
 
 ![SEO metadata](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/example1.gif)
 
+## Recent Changes
+
+**0.2.0**
+
+* Fixed issue with custom URL Names not working if `SeoMetadata.NoSegmentProvider` appSetting wasn't present
+* Added new option to set the developer name
+ 
+**0.1.0**
+
+* Initial release
+
+
 ## Installation
 
 Install the latest version through NuGet.
