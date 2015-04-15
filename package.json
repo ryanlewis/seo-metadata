@@ -3,6 +3,7 @@
   "version": "0.2.1",
   "description": "An Umbraco property editor for SEO metadata",
   "license": "MIT",
+  "licenseUrl": "http://opensource.org/licenses/MIT",
   "author": {
     "name": "Ryan Lewis",
     "email": "ryan@wpyz.org",

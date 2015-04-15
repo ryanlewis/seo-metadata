@@ -156,19 +156,20 @@ module.exports = function (grunt) {
       options: {
         name:        '<%= pkg.name %>',
         version:     '<%= pkg.version %>',
-        url:         '<%= pkg.url %>',
+        url:         '<%= pkg.repository.url %>',
         license:     '<%= pkg.license %>',
         licenseUrl:  '<%= pkg.licenseUrl %>',
-        author:      '<%= pkg.author %>',
-        authorUrl:   '<%= pkg.authorUrl %>',
+        author:      '<%= pkg.author.name %>',
+        authorUrl:   '<%= pkg.author.url %>',
         manifest:    'config/package.xml',
-        readme:      'config/readme.txt',
+        readme:      'README.md',
         sourceDir:   'tmp/umbraco',
         outputDir:   'pkg/umbraco',
       }
     },
 
     clean: {
+      tmp: 'tmp',
       dist: 'dist',
       test: 'test/assets'
     },
