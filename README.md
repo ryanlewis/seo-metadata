@@ -49,7 +49,7 @@ Alternatively, if you want to hack around with the project, you can fork, checko
     <dd>The maximum length of a title. This isn't an exact number, so your mileage may vary. The default value of 65 is a conservative value that should work for most cases. Google will truncate overly long titles with ellipses (&hellip;)</dd>
     
     <dt>SERP Description Length</dt>
-    <dd>The maximum length of a title. This isn't an exact number, so your mileage may vary. The default value of 150 is a conservative value that should work for most cases. Google will truncate overly long descriptions with ellipses (&hellip;)   </dd>
+    <dd>The maximum length of the description. This isn't an exact number, so your mileage may vary. The default value of 150 is a conservative value that should work for most cases. Google will truncate overly long descriptions with ellipses (&hellip;)   </dd>
     
     <dt>Developer Name</dt>
     <dd>Allows you to personalise the template a bit by putting the name of your company/agency/other. This is used within the descriptions on the view and is displayed to your content editors. </dd>
