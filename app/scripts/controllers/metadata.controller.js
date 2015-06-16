@@ -3,8 +3,8 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
 
     $scope.invalidate = true;
     $scope.model.hideLabel = true;
-    $scope.serpTitleLength = 65;
-    $scope.serpDescriptionLength = 150;
+    $scope.serpTitleLength =  !!$scope.model.config.serpTitleLength ? $scope.model.config.serpTitleLength : 65;
+    $scope.serpDescriptionLength = !!$scope.model.config.serpDescriptionLength ? $scope.model.config.serpDescriptionLength : 150;
     $scope.developerName = $scope.model.config.developerName || 'your agency';
 
     // default model.value
