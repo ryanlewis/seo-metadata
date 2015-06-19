@@ -8,10 +8,10 @@
 
             if (attrs.name === 'title') {
                 validate = scope.model.config.allowLongTitles !== '1';
-                length = scope.model.config.serpTitleLength;
+                length = scope.serpTitleLength;
             } else if (attrs.name === 'description') {
                 validate = scope.model.config.allowLongDescriptions !== '1';
-                length = scope.model.config.serpDescriptionLength;
+                length = scope.serpDescriptionLength;
             }
 
             ctrl.$parsers.unshift(function (viewValue) {
