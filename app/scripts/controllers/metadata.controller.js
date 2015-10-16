@@ -14,10 +14,14 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
 
     $scope.GetUrl = function() {
 
-      var urlName = $scope.model.value.urlName && $scope.model.value.urlName.length ? '/' + $scope.model.value.urlName + '/' : $scope.GetParentContent().urls[0];
+      var baseUrl = $scope.GetParentContent().urls[0];
+      
+      var urlName = $scope.model.value.urlName && $scope.model.value.urlName.length 
+        ? baseUrl + $scope.model.value.urlName + '/' 
+        : $scope.GetParentContent().urls[0];
 
       if (urlName === '' || urlName === 'This item is not published') {
-        urlName = '/unpublished-page/';
+        urlName = baseUrl + 'publish-me/';
       }
 
       return $scope.ProtocolAndHost() + urlName;
