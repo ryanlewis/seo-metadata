@@ -93,6 +93,10 @@
             <div class="controls controls-row">
                 <input type="checkbox" id="noIndex" ng-model="model.value.noIndex" />
                 <label for="noIndex">Do Not Index (Hide from Search Engines)</label>
+                <div class="help-block">
+                    <p>{{ doNotIndexExplanation }}</p>
+                    <p>If unsure, leave as-is and speak to {{ developerName }} for advice.</p>
+                </div>
             </div>
         </div>
     </div>

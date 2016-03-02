@@ -38,6 +38,12 @@
             "description": "The name of the agency (for example, \"Epiphany\") to show on the control. This is used in the help descriptions.",
             "key": "developerName",
             "view": "textstring"
+          },
+          {
+            "label": "Do Not Index explanation",
+            "description": "An explanation what the effect of checking 'Do Not Index' is. This is used in the help description.",
+            "key": "doNotIndexExplanation",
+            "view": "textstring"
           }
         ]
       }
