@@ -1,0 +1,16 @@
+version: 0.3.{build}
+skip_non_tags: true
+clone_folder: c:\seo-metadata
+build_script:
+- cmd: >-
+    cd c:\seo-metadata
+
+    nuget restore app\Epiphany.SeoMetadata\Epiphany.SeoMetadata.sln
+
+    npm install
+    npm install grunt --save-dev
+    npm install -g grunt-cli
+
+    grunt nuget
+artifacts:
+- path: pkg\nuget\*
