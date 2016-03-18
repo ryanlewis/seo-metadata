@@ -119,7 +119,10 @@ If you want to disable the `SeoMetadataUrlSegmentProvider` altogether (to add ma
 <add key="SeoMetadata.NoSegmentProvider" value="true" />
 ```
 
-If fields are left blank you want the values from the parent to be resolved, add the following appSetting key.
+### Recursive Values
+
+You will find that `recursive: true` will not work as an instance of the `SeoMetadata` class will always return. You can override this behaviour so that
+the resolver returns null. To do this, add the following appSetting key.
 ```xml
 <add key="SeoMetadata.RecurseIfDefaults" value="true" />
 ```
