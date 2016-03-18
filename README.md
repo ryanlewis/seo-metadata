@@ -1,5 +1,7 @@
 ![SEO metadata](https://raw.githubusercontent.com/ryanlewis/seo-metadata/master/images/epiphany-logo.png)
 
+[![Build status](https://ci.appveyor.com/api/projects/status/14e6avkiyatwr0sy?svg=true)](https://ci.appveyor.com/project/EpiphanySearch/seo-metadata)
+
 # SEO Metadata for Umbraco
 
 SEO Metadata for Umbraco is a property editor that is used for maintaining common SEO-related information for a page. It gives users a visual representation of how the page would look on a Google search result page and hints to when the title and description is too long, with optional validation.
