@@ -8,6 +8,10 @@ SEO Metadata for Umbraco is a property editor that is used for maintaining commo
 
 ## Recent Changes
 
+**0.3.0**
+
+* Allow for recursive property values if all the fields are blank and the AppSettingKey is set.
+
 **0.2.1**
 
 * Fixed some issues with Umbraco package
@@ -113,6 +117,11 @@ SEO Metadata also installs a [UrlSegmentProvider][3] to ensure the URL Name prop
 If you want to disable the `SeoMetadataUrlSegmentProvider` altogether (to add manually, or implement yourself), you can set the following appSetting to disable it.
 ```xml
 <add key="SeoMetadata.NoSegmentProvider" value="true" />
+```
+
+If fields are left blank you want the values from the parent to be resolved, add the following appSetting key.
+```xml
+<add key="SeoMetadata.RecurseIfDefaults" value="true" />
 ```
 
 [1]:https://our.umbraco.org/documentation/extending-umbraco/Property-Editors/PropertyEditorValueConverters
