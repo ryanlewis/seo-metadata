@@ -18,3 +18,13 @@ build_script:
     grunt nuget
 artifacts:
 - path: pkg\nuget\*
+nuget:
+  account_feed: true
+  project_feed: true
+deploy:
+- provider: NuGet
+  api_key:
+    secure: k/T43qaZJs6rl0LQDusHn/fuf8y8hyCs/XIpRHVGrnhHcPyKQGjdAys20P+3GcXy
+  artifact: /.*\.nupkg/
+  on:
+    branch: master
