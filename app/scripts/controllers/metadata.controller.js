@@ -15,14 +15,51 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
 
     $scope.GetUrl = function() {
 
-      var urlName = $scope.model.value.urlName && $scope.model.value.urlName.length ? '/' + $scope.model.value.urlName + '/' : $scope.GetParentContent().urls[0];
+          // regex to text if a URL string is absolute or relative: http://stackoverflow.com/a/10687158
+          var pattern = new RegExp(/^https?:\/\//i);
+          var url = "";
 
-      if (urlName === '' || urlName === 'This item is not published') {
-        urlName = '/unpublished-page/';
-      }
+          var parentContent = $scope.GetParentContent();
 
-      return $scope.ProtocolAndHost() + urlName;
+          // check if any domain is assigned - use if one exists
+          // note it is only available if the node is published
+          if (parentContent.urls && parentContent.urls.length && parentContent.published) {
+              var nodeUrl = parentContent.urls[0];
 
+              // test if it is an absolute url
+              if (pattern.test(nodeUrl)) {
+                  url = nodeUrl;
+              }
+              else {
+                  url = $scope.ProtocolAndHost() + '/' + nodeUrl;
+              }
+
+              if ($scope.model.value.urlName && $scope.model.value.urlName.length) {
+                  var urlSplit = url.split('/');
+
+                  // http://mydomain.com will be splitted into an array of 3 strings: 'http:', '' and 'mydomain.com'
+                  // only handle slugify of urlName under root level
+                  if (urlSplit.length > 4) {
+                      if (urlSplit[urlSplit.length - 1] == "") {
+                          urlSplit[urlSplit.length - 2] = slugify($scope.model.value.urlName);
+                      } else {
+                          urlSplit[urlSplit.length - 1] = slugify($scope.model.value.urlName);
+                      }
+                  }
+
+                  // join new values
+                  url = urlSplit.join('/');
+              }
+          }
+          else if ($scope.model.value.urlName && $scope.model.value.urlName.length) {
+              if (!url.published) {
+                  url = $scope.ProtocolAndHost() + '/unpublished-page/';
+              } else {
+                  url = $scope.ProtocolAndHost() + '/' + slugify($scope.model.value.urlName) + '/';
+              }
+          }
+
+          return url;
     };
 
     $scope.ProtocolAndHost = function() {
@@ -58,5 +95,13 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
         }
       });
     });
+      // a very basic slugify function to replace chars in url
+      function slugify(text) {
+          return text.toString().toLowerCase().trim()
+            .replace(/\s+/g, '-')           // Replace spaces with -
+            .replace(/&/g, '-')             // Replace & with -
+            .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+            .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      }
   }
 ]);
