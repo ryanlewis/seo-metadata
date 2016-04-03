@@ -52,7 +52,7 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
               }
           }
           else if ($scope.model.value.urlName && $scope.model.value.urlName.length) {
-              if (!url.published) {
+              if (!parentContent.published) {
                   url = $scope.ProtocolAndHost() + '/unpublished-page/';
               } else {
                   url = $scope.ProtocolAndHost() + '/' + slugify($scope.model.value.urlName) + '/';
