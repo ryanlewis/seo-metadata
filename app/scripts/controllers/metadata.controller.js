@@ -7,6 +7,7 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
     $scope.serpDescriptionLength = !!$scope.model.config.serpDescriptionLength ? $scope.model.config.serpDescriptionLength : 150;
     $scope.developerName = $scope.model.config.developerName || 'your agency';
     $scope.doNotIndexExplanation = $scope.model.config.doNotIndexExplanation || '';
+    $scope.siteTitle = $scope.model.config.siteTitle || '';
 
     // default model.value
     if (!$scope.model.value) {
@@ -22,6 +23,17 @@ angular.module("umbraco").controller("EpiphanySeoMetadataController", [
       }
 
       return $scope.ProtocolAndHost() + urlName;
+
+    };
+    
+    $scope.GetTitle = function () {
+
+        var title = $scope.model.value.title || 'Page Title';
+
+        if (title !== 'Page Title' && $scope.siteTitle !== '') {
+            title += $scope.siteTitle.replace('&nbsp;', ' ');
+        }
+        return title;
 
     };
 
