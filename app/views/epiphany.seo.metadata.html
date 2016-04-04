@@ -63,7 +63,7 @@
 
                 <img src="/App_Plugins/Epiphany.SeoMetadata/views/serp1.png" alt=""/>
                 <div class="listing">
-                    <h3>{{ model.value.title || 'Page Title' | ellipsisLimit:serpTitleLength}}</h3>
+                    <h3>{{ GetTitle() || 'Page Title' | ellipsisLimit:serpTitleLength}}</h3>
                     <a>{{ GetUrl() }} <i class="icon icon-navigation-down"></i></a>
                     <p>{{ model.value.description || 'My Nice Description of this Page' | ellipsisLimit:serpDescriptionLength }}</p>
                 </div>
