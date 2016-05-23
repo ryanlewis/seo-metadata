@@ -40,6 +40,12 @@
             "view": "textstring"
           },
           {
+            "label": "Site Title",
+            "description": "The default title that should be appended to the title e.g. &nbsp;| My Company",
+            "key": "siteTitle",
+            "view": "textstring"
+          },
+          {
             "label": "Do Not Index explanation",
             "description": "An explanation what the effect of checking 'Do Not Index' is. This is used in the help description.",
             "key": "doNotIndexExplanation",
