@@ -11,7 +11,7 @@ build_script:
 
     npm install
 
-    npm install grunt --save-dev
+    npm install grunt@0.4.5 --save-dev
 
     npm install -g grunt-cli
 
