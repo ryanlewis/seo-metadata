@@ -59,6 +59,9 @@ Alternatively, if you want to hack around with the project, you can fork, checko
     
     <dt>Developer Name</dt>
     <dd>Allows you to personalise the template a bit by putting the name of your company/agency/other. This is used within the descriptions on the view and is displayed to your content editors. </dd>
+    
+    <dt>Site Title</dt>
+    <dd>Allows you to configure a site title that is appended to the title (e.g. " | My Company")</dd>
 </dl>
 
 ## Usage
