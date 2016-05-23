@@ -10,6 +10,11 @@ SEO Metadata for Umbraco is a property editor that is used for maintaining commo
 
 ## Recent Changes
 
+**0.4.0**
+
+* Better handling when multiple domains are configured (#20, #23 - thanks @bjarnef!)
+* Ability to configure an appended title to SEO titles (#22 - thanks @JJCLane!)
+
 **0.3.0**
 
 * Allow for recursive property values if all the fields are blank and the AppSettingKey is set.
