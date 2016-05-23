@@ -8,6 +8,7 @@ angular.module("umbraco")
             $scope.serpDescriptionLength = !!$scope.model.config.serpDescriptionLength ? $scope.model.config.serpDescriptionLength : 150;
             $scope.developerName = $scope.model.config.developerName || 'your agency';
             $scope.doNotIndexExplanation = $scope.model.config.doNotIndexExplanation || '';
+            $scope.siteTitle = $scope.model.config.siteTitle || '';
 
             // default model.value
             if (!$scope.model.value) {
@@ -92,7 +93,16 @@ angular.module("umbraco")
                 var http = location.protocol;
                 var slashes = http.concat("//");
                 return slashes.concat(window.location.hostname);
+            };
 
+            $scope.GetTitle = function () {
+
+                var title = $scope.model.value.title || 'Page Title';
+
+                if (title !== 'Page Title' && $scope.siteTitle !== '') {
+                    title += $scope.siteTitle.replace('&nbsp;', ' ');
+                }
+                return title;
             };
 
             $scope.GetParentContent = function() {
