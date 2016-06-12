@@ -16,8 +16,11 @@ build_script:
     npm install -g grunt-cli
 
     grunt nuget
+    
+    grunt package
 artifacts:
 - path: pkg\nuget\*
+- path: pkg\umbraco\*
 nuget:
   account_feed: true
   project_feed: true
