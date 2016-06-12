@@ -153,6 +153,9 @@ module.exports = function (grunt) {
     },
 
     umbracoPackage: {
+    dist: {
+      src: 'tmp/umbraco',        // Path to a folder containing the files to be packaged
+      dest: 'pkg/umbraco',        // Path to a folder to create the package file
       options: {
         name:        '<%= pkg.name %>',
         version:     '<%= pkg.version %>',
@@ -166,7 +169,8 @@ module.exports = function (grunt) {
         sourceDir:   'tmp/umbraco',
         outputDir:   'pkg/umbraco',
       }
-    },
+    }
+  },
 
     clean: {
       tmp: 'tmp',
