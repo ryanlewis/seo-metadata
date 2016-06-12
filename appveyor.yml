@@ -1,5 +1,5 @@
 version: 0.4.0.{build}
-skip_non_tags: true
+skip_non_tags: false
 clone_folder: c:\seo-metadata
 build_script:
 - cmd: >-
