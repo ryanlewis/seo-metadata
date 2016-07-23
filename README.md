@@ -72,12 +72,10 @@ Alternatively, if you want to hack around with the project, you can fork, checko
 The SEO Metadata is stored as JSON, so can be used dynamically.
 
 ```c#
-<pre>
 Title:         @CurrentPage.Metadata.Title
 Description:   @CurrentPage.Metadata.Description
 Do Not Index?: @CurrentPage.Metadata.NoIndex
 URL Name:      @CurrentPage.Metadata.UrlName
-</pre>
 ```
 
 A [Property Editor Value Converter][1] is installed for getting a strongly-typed **SeoMetadata** instance.
@@ -87,12 +85,10 @@ A [Property Editor Value Converter][1] is installed for getting a strongly-typed
     var metadata = Model.Content.GetPropertyValue<Epiphany.SeoMetadata.SeoMetadata>("metadata");
 }
 
-<pre>
 Title:         @metadata.Title
 Description:   @metadata.Description
 Do Not Index?: @metadata.NoIndex
 URL Name:      @metadata.UrlName
-</pre>
 ```
 
 The following snippet can be used for using the **Do Not Index** checkbox.
