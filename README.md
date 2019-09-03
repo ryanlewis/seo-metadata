@@ -1,6 +1,6 @@
 # SEO Metadata for Umbraco
 
-**This pacakage is no longer maintained. See https://github.com/ryanlewis/seo-metadata/issues/35 **
+**This pacakage is no longer maintained. See https://github.com/ryanlewis/seo-metadata/issues/35**
 
 [![Build status](https://ci.appveyor.com/api/projects/status/bodaqgqs54rtjys0?svg=true)](https://ci.appveyor.com/project/ryanlewis/seo-metadata)
 
